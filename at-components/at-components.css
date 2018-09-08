@@ -1,0 +1,196 @@
+.redactor-dropdown-at-components .redactor-dropdown-item-at-block-info span {
+	color: cornflowerblue;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-block-example span {
+	color: burlywood;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-blockquote span {
+	color: LightSlateGray;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-blockquote-locator span {
+	color: DimGray;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-callout span {
+	color: aquamarine;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-callout-inline span {
+	color: aquamarine;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-note span {
+	color: grey;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-notes span {
+	color: grey;
+}
+.redactor-dropdown-at-components .redactor-dropdown-item-at-references span {
+	color: black;
+}
+
+/* ========================================================================
+   Constructors
+ ========================================================================== */
+.redactor-styles at-block,
+.redactor-styles .block,
+.redactor-styles at-callout[type="block"],
+.redactor-styles at-blockquote {
+	margin: 10px 0;
+	display: inline-block;
+}
+.redactor-styles at-block::before,
+.redactor-styles .block::before,
+.redactor-styles at-callout[type="block"]::before,
+.redactor-styles at-blockquote::before {
+  display: block;
+	font-family: monospace;
+	font-size: 9px;
+	padding: .3em .6em;
+	line-height: 1;
+	color: white;
+}
+
+.redactor-styles at-callout[type="inline"],
+.redactor-styles at-note {
+	display: inline;
+	line-height: 1;
+}
+.redactor-styles at-callout[type="inline"]::before,
+.redactor-styles at-note::before {
+	font-family: monospace;
+	font-size: 9px;
+	line-height: 1;
+	color: white;
+  position: relative;
+  top: -.4em;
+  padding: .6em .3em;
+	margin-right: 1px;
+}
+
+.redactor-styles at-notes,
+.redactor-styles at-references {
+ font-weight: bold;
+ display: block;
+}
+.redactor-styles at-notes::before,
+.redactor-styles at-references::before {
+ display: block;
+ font-family: monospace;
+ font-size: 9px;
+ padding: .3em .6em;
+ line-height: 1;
+ color: white;
+}
+
+/* ========================================================================
+   at-block
+ ========================================================================== */
+.redactor-styles at-block,
+.redactor-styles .block {
+	border: 1px solid silver;
+}
+.redactor-styles at-block::before {
+	content: "block H: "attr(heading) " C: " attr(caption);
+	background-color: silver;
+}
+.redactor-styles .block::before {
+	content: "block list";
+	background-color: silver;
+}
+.redactor-styles at-block[type="info"] {
+	border: 1px solid cornflowerblue;
+}
+.redactor-styles at-block[type="info"]::before {
+	content: "block-info T: "attr(type) " H: "attr(heading) " C: " attr(caption);
+	background-color: cornflowerblue;
+}
+.redactor-styles at-block[type="example"] {
+	border: 1px solid burlywood;
+}
+.redactor-styles at-block[type="example"]::before {
+	content: "block-example T: "attr(type) " H: "attr(heading) " C: " attr(caption);
+	background-color: burlywood;
+}
+/* ========================================================================
+   at-callout
+ ========================================================================== */
+.redactor-styles at-callout[type="block"] {
+	border: 1px solid aquamarine;
+}
+.redactor-styles at-callout[type="block"]::before {
+	content: "callout H: "attr(heading);
+	background-color: aquamarine;
+}
+.redactor-styles at-callout[type="inline"] {
+	border: 1px solid aquamarine;
+	display: inline;
+	line-height: 1;
+}
+.redactor-styles at-callout[type="inline"]::before {
+	content: "callout";
+	background-color: aquamarine;
+}
+/* ========================================================================
+   at-blockquote
+ ========================================================================== */
+.redactor-styles at-blockquote[type="default"] {
+ 	border: 1px solid LightSlateGray;
+ }
+ .redactor-styles at-blockquote[type="locator"] {
+ 	border: 1px solid DimGray;
+ }
+ .redactor-styles at-blockquote[type="default"]::before {
+ 	content: "blockquote A: "attr(author) " S: "attr(source);
+ 	background-color: LightSlateGray;
+ }
+ .redactor-styles at-blockquote[type="locator"]::before {
+ 	content: "blockquote-locator L: "attr(locator) " LP: " attr(locatorPrefix) " A: "attr(author) " S: "attr(source);
+ 	background-color: DimGray;
+ }
+
+/* ========================================================================
+   at-note
+ ========================================================================== */
+.redactor-styles at-note {
+	border: 1px solid grey;
+}
+.redactor-styles at-note::before {
+	background-color: grey;
+}
+.redactor-styles at-note[type="default"]::before {
+	content: "note";
+}
+.redactor-styles at-note[type="margin"]::before {
+	content: "margin note";
+}
+.redactor-styles at-note[type="foot"]::before {
+	content: "foot note";
+}
+/* ========================================================================
+   at-notes, at-references
+ ========================================================================== */
+.redactor-styles at-notes {
+ 	border: 1px solid grey;
+ }
+.redactor-styles at-notes::before {
+	content: "Notes section";
+	background-color: black;
+}
+.redactor-styles at-references {
+	border: 1px solid maroon;
+}
+.redactor-styles at-references::before {
+	content: "References section";
+	background-color: maroon;
+}
+
+/* ========================================================================
+   redactor-structure
+ ========================================================================== */
+.redactor-structure pre::before {
+    content: "pre";
+		left: 1px;
+		position: absolute;
+		color: grey;
+		font-size: 9px;
+		font-weight: normal;
+		opacity: .3;
+}

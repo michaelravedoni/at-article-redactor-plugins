@@ -1,0 +1,160 @@
+/* ========================================================================
+Dropdown
+========================================================================== */
+.redactor-dropdown-at-inline .redactor-dropdown-item-mark span {
+	font-size: 14px;
+	background-color: #fdb833;
+	color: #000;
+	text-decoration: none;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-keyboard span {
+	font-size: 14px;
+	color: #000;
+	border: 1px solid rgba(17,17,17,.2);
+	border-radius: .1875rem;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-i span {
+	font-style: italic;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-quote span,
+.redactor-dropdown-at-inline .redactor-dropdown-item-cite span {
+	font-style: italic;
+	color: #4C565C;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-abbr span,
+.redactor-dropdown-at-inline .redactor-dropdown-item-dfn span {
+	font-size: 14px;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-small span {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1;
+	color: rgba(17,17,17,.8);
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-ins span {
+	font-size: 14px;
+	font-style: italic;
+	text-decoration-line: underline;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-del span {
+	font-size: 14px;
+	text-decoration: line-through;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-code span {
+	font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+	font-size: 13px;
+	background: rgba(0, 0, 0, .05);
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-variable span {
+	font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+	font-size: 13px;
+	color: rgba(0, 0, 0, .5);
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-shortcut span {
+	font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+	font-size: 12px;
+	padding: 0.25em;
+	white-space: nowrap;
+	border: 1px solid #e5e7e9;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-sup span,
+.redactor-dropdown-at-inline .redactor-dropdown-item-sub span {
+	position: relative;
+	font-size: 12px;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-sup span {
+	top: -3px;
+}
+.redactor-dropdown-at-inline .redactor-dropdown-item-sub span {
+	top: 3px;
+}
+
+/* ========================================================================
+Styles
+========================================================================== */
+.redactor-styles cite,
+.redactor-styles q,
+.redactor-styles del,
+.redactor-styles i,
+.redactor-styles dfn,
+.redactor-styles abbr,
+.redactor-styles ins,
+.redactor-styles var,
+.redactor-styles kbd,
+.redactor-styles small,
+.redactor-styles time {
+	border: 1px solid silver;
+	display: inline;
+	line-height: 1;
+}
+.redactor-styles cite::before,
+.redactor-styles q::before,
+.redactor-styles del::before,
+.redactor-styles i::before,
+.redactor-styles dfn::before,
+.redactor-styles abbr::before,
+.redactor-styles ins::before,
+.redactor-styles var::before,
+.redactor-styles kbd::before,
+.redactor-styles small::before,
+.redactor-styles time::before {
+	font-family: monospace;
+	font-size: 9px;
+	line-height: 1;
+	color: white;
+	background-color: silver;
+	position: relative;
+	top: -.4em;
+	padding: .6em .3em;
+	margin-right: 1px;
+}
+
+/* em, i, small
+========================================================================== */
+.redactor-styles em {
+	color: #F0506E;
+}
+.redactor-styles i {
+	font-style: italic;
+}
+.redactor-styles i::before {
+	content: "i";
+}
+.redactor-styles small::before {
+	content: "small";
+}
+/* cite, q
+========================================================================== */
+.redactor-styles cite::before {
+	content: "cite";
+}
+.redactor-styles q::before {
+	content: "q";
+}
+/* dfn, abbr, ins, del
+========================================================================== */
+.redactor-styles dfn::before {
+	content: "dfn";
+}
+.redactor-styles abbr::before {
+	content: "abbr";
+}
+.redactor-styles ins::before {
+	content: "ins";
+}
+.redactor-styles del::before {
+	content: "del";
+}
+/* var, kbd, time
+========================================================================== */
+.redactor-styles var::before {
+	content: "var";
+}
+.redactor-styles kbd::before {
+	content: "kbd";
+}
+.redactor-styles time::before {
+	content: "time";
+}

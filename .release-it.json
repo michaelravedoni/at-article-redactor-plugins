@@ -1,0 +1,37 @@
+{
+  "dry-run": false,
+  "verbose": true,
+  "force": false,
+  "increment": "patch",
+  "safeBump": true,
+  "changelogCommand": "npm run auto-changelog",
+  "requireCleanWorkingDir": false,
+  "src": {
+    "commit": true,
+    "commitMessage": "Release %s",
+    "tag": true,
+    "tagName": "%s",
+    "tagAnnotation": "Release %s",
+    "push": true,
+    "pushRepo": null,
+    "beforeStartCommand": false,
+    "afterReleaseCommand": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release %s",
+    "preRelease": false,
+    "tokenRef": "9a55bb5f0aed6ad7d4a00cfffcf5f646534fbf3e",
+    "draft": false
+  },
+  "prompt": {
+    "src": {
+      "status": false,
+      "commit": true,
+      "tag": true,
+      "push": true,
+      "release": true,
+      "publish": false
+    }
+  }
+}

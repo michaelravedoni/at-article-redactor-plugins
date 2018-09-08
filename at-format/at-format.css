@@ -1,0 +1,12 @@
+.redactor-dropdown-at-format .redactor-dropdown-item-h2no span {
+
+}
+.redactor-styles h2.at-nocount::before,
+.redactor-styles h3.at-nocount::before,
+.redactor-styles h4.at-nocount::before,
+.redactor-styles h5.at-nocount::before,
+.redactor-styles h6.at-nocount::before {
+	content: "* ";
+	font-size: 75%;
+	color: gray;
+}

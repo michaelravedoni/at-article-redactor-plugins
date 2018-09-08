@@ -1,0 +1,55 @@
+.redactor-dropdown-at-components .redactor-dropdown-item-at-citation span {
+	color: brown;
+}
+
+/* ========================================================================
+   Constructors
+ ========================================================================== */
+.redactor-styles at-citation {
+	display: inline;
+	line-height: 1;
+}
+.redactor-styles at-citation::before {
+	font-family: monospace;
+	font-size: 9px;
+	line-height: 1;
+	color: white;
+  position: relative;
+  top: -.4em;
+  padding: .6em .3em;
+	margin-right: 1px;
+}
+
+.redactor-styles at-references {
+ font-weight: bold;
+ display: block;
+}
+.redactor-styles at-references::before {
+ display: block;
+ font-family: monospace;
+ font-size: 9px;
+ padding: .3em .6em;
+ line-height: 1;
+ color: white;
+}
+
+/* ========================================================================
+   at-reference
+ ========================================================================== */
+.redactor-styles at-citation {
+	border: 1px solid brown;
+}
+.redactor-styles at-citation::before {
+	content: "citation K: "attr(key) " L: "attr(label) " L: "attr(locator);
+	background-color: brown;
+}
+/* ========================================================================
+   at-references
+ ========================================================================== */
+.redactor-styles at-references {
+ 	border: 1px solid maroon;
+ }
+ .redactor-styles at-references::before {
+ 	content: "References section";
+ 	background-color: maroon;
+  }

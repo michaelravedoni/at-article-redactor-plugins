@@ -1,0 +1,39 @@
+{
+  "name": "at-article-redactor-plugins",
+  "version": "1.0.0",
+  "description": "Imperavi Redactor plugins for writing clean and flat articles with at-article",
+  "author": "Michael Ravedoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelravedoni/at-article-redactor-plugins/issues"
+  },
+  "homepage": "https://github.com/michaelravedoni/at-article-redactor-plugins",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelravedoni/at-article-redactor-plugins.git"
+  },
+  "scripts": {
+    "release-it": "release-it --verbose --no-requireCleanWorkingDir",
+    "release-it-dry": "release-it --dry-run --verbose",
+    "standard-version": "standard-version --dry-run",
+    "auto-changelog": "auto-changelog -p"
+  },
+  "devDependencies": {
+    "auto-changelog": "^1.8.0",
+    "release-it": "^7.6.0",
+    "standard-version": "^4.4.0"
+  },
+  "standard-version": {
+    "skip": {
+      "bump": true,
+      "commit": true,
+      "tag": true
+    }
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  }
+}
